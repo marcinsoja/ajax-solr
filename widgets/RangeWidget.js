@@ -59,7 +59,12 @@
 
             if (found) {
 
-                value = str_replace([this.field + ':', '[', ']'], '', filterQuery[index]);
+                value = filterQuery[index]
+                    .replace(this.field + ':', '')
+                    .replace('[', '')
+                    .replace(']', '')
+                ;
+                
                 value = value.split(' TO ');
 
                 if (2 == value.length) {
