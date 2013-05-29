@@ -86,7 +86,7 @@
             
             var response = this.manager.response
                 ,responseHasFilterQuery = this.hasProperty(response, 'responseHeader.params.fq')
-                filterQuery = []
+                ,filterQuery = []
             ;
 
             if (responseHasFilterQuery) {

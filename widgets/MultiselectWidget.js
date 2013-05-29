@@ -138,7 +138,7 @@
             uniqueSelected = this.getUnique(selected);
             
             return this.changeSelection(function() {
-                return self.updateLocalState(selected);
+                return self.updateLocalState(uniqueSelected);
             });
         }
         ,remove: function(value) {
