@@ -42,7 +42,7 @@
             
             value = $.trim(value);
             
-            if ('' == value || '*' == value) {
+            if ('' == value || '*' == value || !/^\d+$/.test(value)) {
                 return defaultEmpty;
             }
             
