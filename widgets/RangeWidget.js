@@ -116,8 +116,9 @@
         }
         ,set: function(value) {
             
-            var remove = this.manager.store.removeByValue('fq', new RegExp('^-?' + this.field + ':')),
-            add = this.manager.store.addByValue('fq', this.fq(value));
+            var remove = this.manager.store.removeByValue('fq', new RegExp('^-?' + this.field + ':'))
+                ,add = this.manager.store.addByValue('fq', this.fq(value))
+            ;
     
             return remove || add;
         }

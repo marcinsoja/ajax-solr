@@ -95,23 +95,23 @@
         }
         ,initStore: function() {
             var parameters = [
-                'facet.prefix',
-                'facet.sort',
-                'facet.limit',
-                'facet.offset',
-                'facet.mincount',
-                'facet.missing',
-                'facet.method',
-                'facet.enum.cache.minDf'
+                'facet.prefix'
+                ,'facet.sort'
+                ,'facet.limit'
+                ,'facet.offset'
+                ,'facet.mincount'
+                ,'facet.missing'
+                ,'facet.method'
+                ,'facet.enum.cache.minDf'
             ];
 
             this.manager.store.addByValue('facet', true);
 
             if (this['facet.field'] !== undefined) {
                 this.manager.store.add('facet.field', new AjaxSolr.Parameter({
-                    name: 'facet.field', 
-                    value: this.field, 
-                    locals: {
+                    name: 'facet.field'
+                    ,value: this.field
+                    ,locals: {
                         ex: this.field
                     }
                 }));
@@ -170,9 +170,9 @@
             
             if (current.length) {
                 this.manager.store.add('fq', new AjaxSolr.Parameter({
-                    name: 'fq', 
-                    value: current.join(' OR '), 
-                    locals: {
+                    name: 'fq'
+                    ,value: current.join(' OR ')
+                    ,locals: {
                         tag: this.field
                     }
                 }));

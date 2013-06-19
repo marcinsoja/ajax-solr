@@ -96,14 +96,14 @@
         }
         ,initStore: function() {
             var parameters = [
-                'facet.prefix',
-                'facet.sort',
-                'facet.limit',
-                'facet.offset',
-                'facet.mincount',
-                'facet.missing',
-                'facet.method',
-                'facet.enum.cache.minDf'
+                'facet.prefix'
+                ,'facet.sort'
+                ,'facet.limit'
+                ,'facet.offset'
+                ,'facet.mincount'
+                ,'facet.missing'
+                ,'facet.method'
+                ,'facet.enum.cache.minDf'
             ];
 
             this.manager.store.addByValue('facet', true);
